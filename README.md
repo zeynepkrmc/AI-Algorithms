@@ -13,9 +13,9 @@ First algorithms are depth first search and breadth first search.
   - Only if costs are all 1 
 # Depth First Search
 - What nodes does DFS expand?
- - Some left prefix of the tree.
- - Could process the whole tree!
- - If m is finite, takes time O(b^m)
+  - Some left prefix of the tree.
+  - Could process the whole tree!
+  - If m is finite, takes time O(b^m)
 - How much space does the fringe take?
   - Only has siblings on path to root, so O(bm)
 - Is it complete?
