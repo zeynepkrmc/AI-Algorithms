@@ -22,5 +22,5 @@ First algorithms are depth first search and breadth first search.
   - m could be infinite, so only if we prevent 
 cycles 
  - Is it optimal?
-  - No, it finds the “leftmost” solution, 
+   - No, it finds the “leftmost” solution, 
 regardless of depth or cost.
