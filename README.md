@@ -2,9 +2,9 @@
 First algorithms are depth first search and breadth first search.
 # Breadth First Search
 - What nodes does BFS expand?
- - Processes all nodes above shallowest solution
- - Let depth of shallowest solution be s
- - Search takes time O(b^s)
+  - Processes all nodes above shallowest solution
+  - Let depth of shallowest solution be s
+  - Search takes time O(b^s)
 - How much space does the fringe take?
   - Has roughly the last tier, so O(b^s)
   - Is it complete?
