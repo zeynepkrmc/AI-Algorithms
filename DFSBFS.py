@@ -12,34 +12,67 @@ graph = {
     'c': ['a'],
     'b': ['a']
 }
+def dfs(graph, start):
+    visited = set()  # To keep track of visited nodes
+    stack = [start]  # Use stack for DFS
 
-# DFS implementation
-def dfs(graph, start, visited=None):
-    if visited is None:
-        visited = set()
-    visited.add(start)
-    print(start, end=" ")
-    for neighbor in graph.get(start, []):
-        if neighbor not in visited:
-            dfs(graph, neighbor, visited)
+    while stack:
+        node = stack.pop()  # Pop a node from the stack
+        if node not in visited:
+            print(node, end=" ")  # Process the node
+            visited.add(node)
 
-# BFS implementation
-def bfs(graph, start):
-    visited = set([start])
-    queue = deque([start])
-    while queue:
-        node = queue.popleft()
-        print(node, end=" ")
-        for neighbor in graph.get(node, []):
-            if neighbor not in visited:
-                visited.add(neighbor)
-                queue.append(neighbor)
+            # Add unvisited neighbors to the stack
+            for neighbor in graph[node]:
+                if neighbor not in visited:
+                    stack.append(neighbor)
 
 # Run DFS starting from 'S'
 print("DFS traversal starting from node 'S':")
 dfs(graph, 'S')
 print("\n")
 
+
+def bfs(graph, start):
+    visited = set()  # To keep track of visited nodes
+    queue = deque([start])  # Use queue for BFS
+
+    while queue:
+        node = queue.popleft()  # Dequeue a node from the queue
+        if node not in visited:
+            print(node, end=" ")  # Process the node
+            visited.add(node)
+
+            # Add unvisited neighbors to the queue
+            for neighbor in graph[node]:
+                if neighbor not in visited:
+                    queue.append(neighbor)
+
 # Run BFS starting from 'S'
 print("BFS traversal starting from node 'S':")
 bfs(graph, 'S')
+
+
+
+
+# DFS implementation
+#def dfs(graph, start, visited=None):
+ #   if visited is None:
+  #      visited = set()
+  #  visited.add(start)
+   # print(start, end=" ")
+    #for neighbor in graph.get(start, []):
+     #   if neighbor not in visited:
+      #      dfs(graph, neighbor, visited)
+
+# BFS implementation
+#def bfs(graph, start):
+ #   visited = set([start])
+   # queue = deque([start])
+  #  while queue:
+       # node = queue.popleft()
+       # print(node, end=" ")
+      #  for neighbor in graph.get(node, []):
+         #   if neighbor not in visited:
+        #        visited.add(neighbor)
+       #         queue.append(neighbor)
