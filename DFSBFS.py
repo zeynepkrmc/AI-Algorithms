@@ -52,7 +52,11 @@ def bfs(graph, start):
 print("BFS traversal starting from node 'S':")
 bfs(graph, 'S')
 
+#DFS (Depth-First Search):
+#['S', 'd', 'b', 'a', 'c', 'e', 'h', 'p', 'q', 'r', 'f', 'G']
 
+#BFS (Breadth-First Search):
+#['S', 'd', 'e', 'p', 'b', 'c', 'h', 'r', 'q', 'a', 'f', 'G']
 
 
 # DFS implementation
